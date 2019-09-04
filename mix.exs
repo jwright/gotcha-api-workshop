@@ -34,10 +34,13 @@ defmodule Gotcha.MixProject do
   defp deps do
     [
       {:absinthe_plug, "~> 1.4.0"},
+      {:ex_machina, "~> 2.3", only: :test},
+      {:faker, "~> 0.12", only: :test},
       {:phoenix, "~> 1.4.9"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
       {:ecto_sql, "~> 3.1"},
+      {:geocalc, "~> 0.5"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
