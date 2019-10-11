@@ -73,4 +73,17 @@ defmodule Gotcha.PlayerTest do
                {"can't be blank", [validation: :required]}
     end
   end
+
+  describe ".create" do
+    test "hashes the password" do
+      {:ok, player} =
+        Player.create(%{
+          email_address: "jimmy@example.com",
+          name: "Jimmy Page",
+          password: "secret"
+        })
+
+      assert Bcrypt.verify_pass("secret", player.password_hash)
+    end
+  end
 end
