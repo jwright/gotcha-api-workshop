@@ -34,6 +34,7 @@ defmodule Gotcha.MixProject do
   defp deps do
     [
       {:absinthe_plug, "~> 1.4.0"},
+      {:bcrypt_elixir, "~> 2.0"},
       {:ex_machina, "~> 2.3", only: :test},
       {:faker, "~> 0.12", only: :test},
       {:phoenix, "~> 1.4.9"},
